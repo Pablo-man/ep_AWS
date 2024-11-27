@@ -25,4 +25,3 @@ jobs:
         echo "Node version:"
         node --version || echo "Node.js no está instalado"
         echo "Puertos abiertos:"
-        netstat -tuln
