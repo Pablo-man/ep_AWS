@@ -8,31 +8,17 @@ jobs:
   build:
 
     runs-on: self-hosted
-<<<<<<< HEAD
-=======
 
-    strategy:
-      matrix:
-        node-version: '18.18.2'
-
->>>>>>> 203d2a2 (update)
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
         cache: 'npm'
-<<<<<<< HEAD
+
     - run: npm i
     - run: npm run dev & 
-=======
-    - name: Perform npm
-      working-directory: ${{ github.workspace }}/my-app
-      run: |
-        node --version
-        npm i
-        npm run dev
 
     - name: Debug
       run: |
@@ -40,5 +26,3 @@ jobs:
         node --version || echo "Node.js no está instalado"
         echo "Puertos abiertos:"
         netstat -tuln
-
->>>>>>> 203d2a2 (update)
